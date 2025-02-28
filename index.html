@@ -30,13 +30,13 @@
     </noscript>
 </head>
 <body>
-    <img src="açaiblack1.png" alt="Logo da Empresa" class="logo">
+    <img src="açaiblack1.png" alt="" class="logo">
     
     <script>
         document.querySelector("img").onload = () => {
             document.body.style.visibility = "visible";
 
-            // 🔥 Marca o evento de compra no Kwai Ads
+            // Marca o evento de compra no Kwai Ads
             if (typeof kwaiq !== "undefined" && typeof kwaiq.track === "function") {
                 kwaiq.track("purchase");
             }
