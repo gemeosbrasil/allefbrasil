@@ -8,18 +8,21 @@
 
     <!-- Pixel do Kwai Ads -->
     <script>
-        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'kw.start':new Date().getTime(),event:'kw.js'});
-        var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='kwDataLayer'?'&l='+l:'';  
-        j.async=true; j.src='https://s1.kwai.net/kos/s101/nlav11187/pixel/events.js?id='+i+dl;  
-        f.parentNode.insertBefore(j,f);  
-        })(window,document,'script','kwDataLayer','271896084607313');
+        (function(w,d,s,l,i){
+            w[l]=w[l]||[];
+            w[l].push({'kw.start':new Date().getTime(),event:'kw.js'});
+            var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='kwDataLayer'?'&l='+l:'';  
+            j.async=true; j.src='https://s1.kwai.net/kos/s101/nlav11187/pixel/events.js?id='+i+dl;  
+            f.parentNode.insertBefore(j,f);  
+        })(window, document, 'script', 'kwDataLayer', '271896084607313');
     </script>
-    
+
     <script>
-        window.onload = function() {
-            kwDataLayer.push({ event: "purchase" });
+        document.addEventListener("DOMContentLoaded", function() {
+            kwDataLayer.push({ event: "purchase" });  
             kwDataLayer.push({ event: "addToCart" });
-        };
+            console.log("Eventos Kwai ativados: purchase e addToCart");
+        });
     </script>
 
     <style>
@@ -32,7 +35,7 @@
             margin: 0;
         }
         .imagem {
-            width: 80%;  /* Ajuste o tamanho conforme necessário */
+            width: 80%;
             max-width: 300px;
             animation: piscar 1s infinite alternate;
         }
